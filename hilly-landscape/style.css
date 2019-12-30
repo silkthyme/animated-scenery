@@ -58,6 +58,21 @@
     transform: rotate(-20deg);
   }
   
+  .tree-left {
+    position: absolute;
+    z-index: 5;
+    left: 140px;
+    bottom: -40px;
+  }  
+  
+  .tree-left .trunk {
+    z-index: 3;
+    height: 410px;
+    width: 20px;
+    background: #1c415c;
+    border-radius: 100% 100% 0 0;
+  }
+
   @media screen and (max-width: 970px) {
     .container {
       transform: scale(.7);
