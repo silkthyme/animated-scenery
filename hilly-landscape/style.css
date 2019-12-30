@@ -53,7 +53,7 @@ html, body {
   background: #d0eb21;
   top: -60px;
   right: 200px;
-  background: linear-gradient(170deg,
+  background: linear-gradient(175deg,
   #ffebb5 0%, #036b9c 80%);
   transform: rotate(-20deg);
 }
@@ -186,7 +186,76 @@ height: 100px;
 left: 32.5px;
 border-radius: 100% 100% 60% 60%;
 }
-
+.stars {
+position: absolute;
+display: flex;
+justify-content: space-evenly;
+height: 500px;
+width: 700px;
+} 
+.star {
+width: 3px;
+height: 3px;
+position: relative;
+border-radius: 50%;
+background: #ffffff;
+box-shadow: 0px 0px 9px 2px 
+rgba(255,255,255,0.80);
+}
+.star:nth-child(1) {
+top: 20px;
+left: 80px;
+}
+.star:nth-child(2) {
+top: 200px;
+left: 400px;
+}
+.star:nth-child(3) {
+top: 250px;
+left: 150px;
+}
+.star:nth-child(4) {
+top: 300px;
+left: 80px;
+}
+.star:nth-child(5) {
+top: 70px;
+height: 5px;
+width: 5px;
+left: 40px;
+}
+.star:nth-child(6) {
+top: 90px;
+left: 300px;
+}
+.star:nth-child(7) {
+top: 100px;
+left: 300px;
+}
+.star:nth-child(8) {
+top: 130px;
+height: 6px;
+width: 6px;
+left: -400px;
+}
+.star:nth-child(9) {
+top: 360px;
+left: -70px;
+}
+.star:nth-child(10) {
+top: 110px;
+left: -100px;
+}
+.star:nth-child(11) {
+top: 20px;
+height: 7px;
+width: 7px;
+left: 80px;
+}
+.star:nth-child(12) {
+top: 30px;
+left: -300px;
+}
 @media screen and (max-width: 970px) {
   .container {
     transform: scale(.7);
