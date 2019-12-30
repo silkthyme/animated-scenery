@@ -26,7 +26,7 @@
     position: relative;
     display: flex;
     width: 1000px;
-    bottom: -150px;
+    bottom: -500px;
     left: -40px;
     height: 400px;
   }
@@ -34,13 +34,14 @@
   .hill-left {
     position: relative;
     z-index: 2;
-    width: 400px;
-    height: 200px;
+    width: 900px;
+    height: 500px;
     border-radius: 100%;
-    background: #8ed65a;
-    top: -6px;
-    left: -10px;
-    transform: rotate(8deg);
+    background: linear-gradient(160deg,
+    #d0eb21 0%, #044d31 40%);
+    top: -100px;
+    left: -180px;
+    transform: rotate(20deg);
   }
   
   @media screen and (max-width: 970px) {
