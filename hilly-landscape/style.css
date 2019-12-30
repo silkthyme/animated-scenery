@@ -149,7 +149,7 @@ z-index: 0;
 width: 60px;
 height: 130px;
 border-radius: 80%;
-background: linear-gradient(110deg, #ffebb5 0%, #199ecf 50%);
+background: linear-gradient(120deg, #ffebb5 0%, #199ecf 40%);
 top: 280px;
 left: 100px;
 }
@@ -158,10 +158,32 @@ left: 100px;
 position: absolute;
 z-index: 0;
 top: 120px;
-background: linear-gradient(70deg, #ffebb5 0%, #199ecf 60%);
+background: linear-gradient(70deg, #ffebb5 0%, #199ecf 40%);
 width: 10px;
 height: 40px;
 left: 25px;
+border-radius: 4px;
+}
+
+.tree-front {
+position: absolute;
+left: 200px;
+top: 170px;
+z-index: 3;
+width: 80px;
+height: 200px;
+border-radius: 80%;
+background: linear-gradient(110deg, #ffebb5 0%, #0987b5 60%);
+}
+
+.tree-front .trunk {
+position: absolute;
+z-index: 2;
+top: 197px;
+background: #04668a;
+width: 15px;
+height: 50px;
+left: 32.5px;
 border-radius: 4px;
 }
 
