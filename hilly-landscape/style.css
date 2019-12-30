@@ -17,7 +17,7 @@ html, body {
   height: 600px;
   background: #0a0b1f;
   overflow: hidden;
-  background: linear-gradient(90deg,
+  background: linear-gradient(120deg,
   #f5b349 0%, #78cdf5 78%);
   opacity: 0.95;
   border-radius: 40px;
@@ -135,6 +135,34 @@ left: -55px;
 top: -100px;
 width: 130px;
 height: 130px;
+}
+
+.tree-right {
+position: relative;
+left: 370px;
+top: 40px;
+}
+
+.tree-back {
+position: absolute;
+z-index: 0;
+width: 60px;
+height: 130px;
+border-radius: 80%;
+background: linear-gradient(110deg, #ffebb5 0%, #199ecf 50%);
+top: 280px;
+left: 100px;
+}
+
+.tree-back .trunk {
+position: absolute;
+z-index: 0;
+top: 120px;
+background: linear-gradient(70deg, #ffebb5 0%, #199ecf 60%);
+width: 10px;
+height: 40px;
+left: 25px;
+border-radius: 4px;
 }
 
 @media screen and (max-width: 970px) {
