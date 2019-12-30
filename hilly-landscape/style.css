@@ -107,7 +107,7 @@ transform: rotate(20deg);
 
 .leaf-cluster {
 position: absolute;
-background: linear-gradient(60deg, #ffebb5 0%, #0f7ca3 37%);
+background: linear-gradient(60deg, #ffebb5 0%, #0f7ca3 30%);
 border-radius: 63% 37% 31% 69% / 60% 74% 26% 40% ;
 transform: rotate(40deg);
 }
