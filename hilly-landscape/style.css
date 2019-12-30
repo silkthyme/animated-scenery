@@ -256,6 +256,55 @@ left: 80px;
 top: 30px;
 left: -300px;
 }
+.comets {
+position: absolute;
+width: 500px;
+height: 400px;
+top: 100px;
+left: 90px;
+}
+.comet {
+position: absolute;
+z-index: 1;
+height: 4px;
+border-radius: 14px;
+transform: rotate(14deg);
+}
+
+.comet:nth-child(1) {
+width: 130px;
+top: 30px;
+right: 100px;
+background: linear-gradient(to right, #adb799 0%, #fff6c9 80%);
+}
+
+.comet:nth-child(2) {
+width: 200px;
+top: 20px;
+right: 200px;
+background: linear-gradient(to right, #bcb485 0%, #fff6c9 80%);
+}
+
+.comet:nth-child(3) {
+width: 100px;
+top: -70px;
+right: 470px;
+background: linear-gradient(to right, #e4ad4f 0%, #fff6c9 70%);
+}
+
+.comet:nth-child(4) {
+width: 80px;
+top: -30px;
+right: 190px;
+background: linear-gradient(to right, #b1b796 0%, #fff6c9 70%);
+}
+
+.comet:nth-child(5) {
+width: 150px;
+top: 130px;
+right: -80px;
+background: linear-gradient(to right, #87c0ce 0%, #fff6c9 70%);
+}
 @media screen and (max-width: 970px) {
   .container {
     transform: scale(.7);
