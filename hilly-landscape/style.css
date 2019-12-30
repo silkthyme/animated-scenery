@@ -107,13 +107,13 @@ transform: rotate(20deg);
 
 .leaf-cluster {
 position: absolute;
-z-index: -1;
-background: #0f7ca3;
+background: linear-gradient(60deg, #ffebb5 0%, #0f7ca3 37%);
 border-radius: 63% 37% 31% 69% / 60% 74% 26% 40% ;
 transform: rotate(40deg);
 }
 
 .leaf-cluster:nth-child(1) {
+z-index: -2;
 left: -80px;
 top: -50px;
 width: 180px;
@@ -121,6 +121,7 @@ height: 180px;
 }
 
 .leaf-cluster:nth-child(2) {
+z-index: -1;
 left: -90px;
 top: 40px;
 width: 200px;
@@ -128,6 +129,7 @@ height: 200px;
 }
 
 .leaf-cluster:nth-child(3) {
+z-index: -3;
 left: -55px;
 top: -100px;
 width: 130px;
