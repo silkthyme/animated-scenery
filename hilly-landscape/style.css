@@ -38,7 +38,7 @@
     height: 300px;
     border-radius: 100%;
     background: linear-gradient(170deg,
-    #d0eb21 0%, #044d31 48%);
+    #ffebb5 0%, #036b9c 48%);
     top: -100px;
     left: -100px;
     transform: rotate(20deg);
@@ -54,7 +54,7 @@
     top: -60px;
     right: 200px;
     background: linear-gradient(170deg,
-    #d0eb21 0%, #044d31 80%);
+    #ffebb5 0%, #036b9c 80%);
     transform: rotate(-20deg);
   }
   
