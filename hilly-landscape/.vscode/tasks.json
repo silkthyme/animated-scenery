@@ -1,0 +1,11 @@
+{
+    "version": "2.0.0",
+    "linux": {
+        "command": "xdg-open"
+    },
+    "taskName": "Open in Browser",
+    "type": "shell",
+    "echo": true,
+    "revealOutput": "never",
+    "args": ["${file}"]
+}
