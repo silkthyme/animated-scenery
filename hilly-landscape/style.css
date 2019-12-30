@@ -73,6 +73,38 @@
     border-radius: 100% 100% 0 0;
   }
 
+.branch {
+  background: #1c415c;
+  position: relative;
+}
+
+.branch:nth-child(1) {
+  width: 13px;
+  height: 120px;
+  top: 170px;
+  left: -30px;
+  border-radius: 100%;
+  transform: rotate(-40deg);
+}
+
+.branch:nth-child(2) {
+  width: 8px;
+  height: 100px;
+  top: -80px;
+  left: 30px;
+  border-radius: 100%;
+  transform: rotate(40deg);
+}
+
+.branch:nth-child(3) {
+  width: 12px;
+  height: 150px;
+  top: -30px;
+  left: 40px;
+  border-radius: 100%;
+  transform: rotate(35deg);
+}
+
   @media screen and (max-width: 970px) {
     .container {
       transform: scale(.7);
