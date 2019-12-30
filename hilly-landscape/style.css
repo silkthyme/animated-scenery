@@ -146,22 +146,22 @@ top: 40px;
 .tree-back {
 position: absolute;
 z-index: 0;
-width: 60px;
-height: 130px;
+width: 50px;
+height: 120px;
 border-radius: 80%;
 background: linear-gradient(120deg, #ffebb5 0%, #199ecf 40%);
 top: 280px;
-left: 100px;
+left: 115px;
 }
 
 .tree-back .trunk {
 position: absolute;
 z-index: 0;
-top: 120px;
+top: 110px;
 background: linear-gradient(70deg, #ffebb5 0%, #199ecf 40%);
-width: 10px;
+width: 9px;
 height: 40px;
-left: 25px;
+left: 21px;
 border-radius: 4px;
 }
 
@@ -179,12 +179,12 @@ background: linear-gradient(110deg, #ffebb5 0%, #0987b5 60%);
 .tree-front .trunk {
 position: absolute;
 z-index: 2;
-top: 197px;
-background: #04668a;
-width: 15px;
-height: 50px;
+top: 140px;
+background: linear-gradient(180deg,#0987b5 0%, #04668a 100%);
+width: 12px;
+height: 100px;
 left: 32.5px;
-border-radius: 4px;
+border-radius: 100% 100% 60% 60%;
 }
 
 @media screen and (max-width: 970px) {
