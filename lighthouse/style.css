@@ -1,0 +1,67 @@
+:root {
+--x-dark: #e08aed;
+--dark: #a885e6;
+--medium: #4a9bff;
+--light: #abaff5;
+--x-light: #0faad9;
+--aqua: #0dbfff;
+--grey: #9e9ebe;
+--yellow: #f7f2b4;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+* {
+  position: absolute;
+}
+*:before,
+*:after {
+  content: "";
+  position: absolute;
+}
+.scene {
+  width: 100vw;
+  height: 100vh;
+}
+.background {
+  background: var(--x-dark);
+  background-image: linear-gradient(
+    var(--x-dark) 0%,
+    var(--dark) 10%,
+    var(--medium) 60%,
+    var(--aqua) 90%
+  );
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+.sea {
+  background: var(--x-dark);
+  background-image: linear-gradient(
+    to top,
+    var(--x-dark) 0%,
+    var(--dark) 30%,
+    var(--medium) 60%,
+    var(--aqua) 90%
+  );
+  width: 100%;
+  height: 250px;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+}
