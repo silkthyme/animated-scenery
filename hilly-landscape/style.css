@@ -614,6 +614,58 @@ background: #1c3f58;
 left: 13px;
 }
 
+.plant {
+z-index: 9;
+position: absolute;
+width: 70px;
+height: 90px;
+background: #1c3f58;
+bottom: -10px;
+left: 0px;
+-webkit-clip-path: polygon(25% 0%, 57% 0, 31% 100%, 0% 100%);
+clip-path: polygon(25% 0%, 57% 0, 31% 100%, 0% 100%);
+opacity: 0.8;
+}
+
+.leaf {
+z-index: 10;
+position: absolute;
+height: 100px;
+width: 50px;
+left: 12px;
+bottom: -20px;
+background: #1c3f58;
+opacity: 1;
+-webkit-clip-path: polygon(16% 1%, 100% 100%, 57% 0);
+clip-path: polygon(16% 1%, 100% 100%, 57% 0);
+}
+
+.grass1 {
+z-index: 11;
+position: absolute;
+height: 150px;
+width: 100px;
+background: #1c3f58;
+-webkit-clip-path: polygon(50% 0%, 0% 100%, 31% 100%);
+clip-path: polygon(50% 0%, 0% 100%, 31% 100%);
+opacity: 0.6;
+left: 24px;
+bottom: -29px;
+}
+
+.grass2 {
+z-index: 11;
+position: absolute;
+height: 90px;
+width: 100px;
+background: #1c3f58;
+-webkit-clip-path: polygon(50% 0%, 0% 100%, 31% 100%);
+clip-path: polygon(50% 0%, 0% 100%, 31% 100%);
+opacity: 0.9;
+left: 30px;
+bottom: -29px;
+}
+
 @media screen and (max-width: 970px) {
   .container {
     transform: scale(.7);
