@@ -305,6 +305,80 @@ top: 130px;
 right: -80px;
 background: linear-gradient(to right, #87c0ce 0%, #fff6c9 70%);
 }
+
+.glow1 {
+z-index: 0;
+position: absolute;
+width: 20px;
+height: 20px;
+border-radius: 100%;
+background: #ffffff;
+filter: blur(5px);
+opacity: 0.5;
+top: 100px;
+left: 260px;
+}
+
+.big-star1 {
+z-index: -1;
+position: absolute;
+width: 20px;
+height: 20px;
+-webkit-clip-path: polygon(42% 31%, 51% 0, 58% 30%, 82% 35%, 59% 44%, 50% 100%, 44% 44%, 18% 37%);
+clip-path: polygon(42% 31%, 51% 0, 58% 30%, 82% 35%, 59% 44%, 50% 100%, 44% 44%, 18% 37%);
+background: #ffffff;
+top: 100px;
+left: 260px;
+}
+.glow2 {
+z-index: 0;
+position: absolute;
+width: 20px;
+height: 20px;
+border-radius: 100%;
+background: #ffffff;
+filter: blur(5px);
+opacity: 0.5;
+top: 45px;
+left: 10px;
+}
+
+.big-star2 {
+z-index: -1;
+position: absolute;
+width: 20px;
+height: 20px;
+-webkit-clip-path: polygon(42% 31%, 51% 0, 58% 30%, 82% 35%, 59% 44%, 50% 100%, 44% 44%, 18% 37%);
+clip-path: polygon(42% 31%, 51% 0, 58% 30%, 82% 35%, 59% 44%, 50% 100%, 44% 44%, 18% 37%);
+background: #ffffff;
+top: 45px;
+left: 10px;
+}
+
+.glow3 {
+z-index: 0;
+position: absolute;
+width: 20px;
+height: 20px;
+border-radius: 100%;
+background: #ffffff;
+filter: blur(5px);
+opacity: 0.5;
+top: 30px;
+left: 360px;
+}
+
+.big-star3 {
+z-index: -1;
+position: absolute;
+width: 20px;
+height: 20px;
+-webkit-clip-path: polygon(42% 31%, 51% 0, 58% 30%, 82% 35%, 59% 44%, 50% 100%, 44% 44%, 18% 37%);
+clip-path: polygon(42% 31%, 51% 0, 58% 30%, 82% 35%, 59% 44%, 50% 100%, 44% 44%, 18% 37%);
+background: #ffffff;
+top: 30px;
+left: 360px;
+}
 @media screen and (max-width: 970px) {
   .container {
     transform: scale(.7);
