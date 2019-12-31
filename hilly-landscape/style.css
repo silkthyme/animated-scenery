@@ -434,6 +434,51 @@ background: #1c3f58;
 left: 13px;
 }
 
+.circle-plant2 {
+z-index: 6;
+width: 30px;
+height: 30px;
+position: absolute;
+border-radius: 100%;
+bottom:100px;
+left: 280px;
+background: #ffc6b5;
+box-shadow: 0px 0px 9px 2px rgba(255,255,255,0.80);
+}
+
+.circle-plant2 .pistil {
+z-index: 7;
+position: relative;
+width: 23px;
+height: 23px;
+border-radius: 100%;
+background: #1c3f58;
+opacity: 0.6;
+bottom: -4px;
+left: 3.5px;
+}
+
+.circle-plant2 .stigma {
+z-index: 8;
+position: relative;
+width: 6px;
+height: 6px;
+background: #e5ac4c;
+border-radius: 100%;
+left: 12px;
+bottom: 11px;
+}
+.circle-plant2 .stem {
+z-index: -3;
+position: relative;
+width: 4px;
+border-radius: 10%;
+height: 120px;
+bottom: 4px;
+background: #1c3f58;
+left: 13px;
+}
+
 @media screen and (max-width: 970px) {
   .container {
     transform: scale(.7);
