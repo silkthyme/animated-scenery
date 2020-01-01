@@ -1,0 +1,505 @@
+$x-dark: #3006c7;
+$dark: #3a37d4;
+$medium: #4a9bff;
+$light: #dee0ff;
+$x-light: #ffffff;
+$aqua: #9eeaff;
+$grey: #9e9ebe;
+$yellow: #fffcd1;
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+* {
+  position: absolute;
+}
+*:before,
+*:after {
+  content: "";
+  position: absolute;
+}
+.scene {
+  width: 100vw;
+  height: 100vh;
+}
+.background {
+  background: $x-dark;
+  background-image: linear-gradient(
+    $x-dark 0%,
+    $dark 10%,
+    $medium 60%,
+    $aqua 90%
+  );
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+
+.sea {
+  background: $x-dark;
+  background-image: linear-gradient(
+    to top,
+    $x-dark 0%,
+    $dark 30%,
+    $medium 60%,
+    $aqua 90%
+  );
+  width: 100%;
+  height: 250px;
+  bottom: 0;
+  left: 0;
+  z-index: 4;
+  .wave {
+		height: 3px;
+		background-color: $x-light;
+		border-radius: 100%;
+		opacity: 0.2;
+		animation: wave 4s linear infinite;
+	}
+	@for $i from 1 through (30) {
+		$size: random(170) + 50px;
+		.wave:nth-of-type(#{$i}) {
+			width: $size;
+			bottom: random(170) + px;
+			left: random(100) + vw;
+			opacity: random(5) * 0.1;
+			animation-delay: random(3) + s;
+		}
+	}
+}
+
+.stars {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  .star {
+    background-color: $light;
+    box-shadow: 0px 0px 15px 1px white;
+    animation: twinkle 3s ease-in-out infinite;
+  }
+}
+
+@for $i from 1 through (200) {
+  $size: random(3)+px;
+  .star:nth-of-type(#{$i}) {
+    border-radius: 50%;
+    top: random(100)+vh;
+    left: random(100)+vw;
+    width: $size;
+    height: $size;
+    animation-delay: random(5)+s;
+  }
+}
+
+.moon {
+  width: 80px;
+  height: 80px;
+  top: 25%;
+  right: 10%;
+  border-radius: 50%;
+  z-index: 2;
+  background-color: $x-light;
+  box-shadow: 0 0 10px $x-light, 0 0 20px $x-light, 0 0 30px $x-light, 0 0 40px $x-light, 0 0 50px $aqua, 0 0 100px $x-light;
+}
+
+.mountains {
+  width: 100%;
+  height: 250px;
+  bottom: 162px;
+  z-index: 3;
+  
+  .mountain {
+    width: 250px;
+    height: 250px;
+    background-color: $medium;
+    right: 50px;
+    bottom: -40px;
+    transform: rotate(45deg);
+    border-radius: 3px;
+    &:after {
+      width: 100%;
+      height: 100%;
+      opacity: 0.7;
+      background-image: linear-gradient(135deg, #3006c7 0%, #56a7ff 30%, $aqua 40%);
+    }
+  }
+  
+  .mountain:nth-child(2) {
+    right: 220px;
+    width: 240px;
+    height: 240px;
+    z-index: 2;
+  }
+  
+  .mountain:nth-child(3) {
+    right: 350px;
+    width: 260px;
+    height: 260px;
+  }
+  
+  .mountain:nth-child(4) {
+    right: 130px;
+    width: 200px;
+    height: 200px;
+    z-index: 3;
+    bottom: -70px;
+    &:after {
+      background-image: linear-gradient(135deg, #3006c7 0%, #56a7ff 15%, $aqua 25%);
+    }
+  }
+}
+$boatSpeed: 40s;
+
+.boat {
+  width: 90px;
+  height: 90px;
+  bottom: 90px;
+  animation: boat $boatSpeed linear infinite;
+   &:after {
+    height: 10px;
+    width: 180px;
+    background: linear-gradient(90deg, transparentize($light, 0.3) 30%, rgba(255, 255, 255, 0) 100%); 
+    border-radius: 40%;
+    top: 105px;
+    left: 25px;
+    z-index: 10;
+    animation: boatShadow $boatSpeed linear infinite;
+    transform: skewX(35deg);
+  }
+  &:before {
+    width: 92px;
+    height: 50px;
+    left: 25px;
+    bottom: -70px;
+    background: linear-gradient(to bottom, transparentize(#310fc9, 0.2) 30%, transparentize($x-dark, 1) 100%);
+    z-index: 10;
+    opacity: 1;
+  }
+  .base {
+    opacity: 1;
+    width: 110px;
+    height: 25px;
+    bottom: -20px;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%);
+    background-color: #04448a;
+  }
+  .sail:nth-child(1) {
+    opacity: 1;
+    width: 90px;
+    height: 80px;
+    left: 5px;
+    clip-path: polygon(50% 0%, 0% 100%, 50% 100%);
+    background: linear-gradient(#a885e6 0%, #04448a 50%);
+  }
+  .sail:nth-child(2) {
+    opacity: 1;
+    width: 80px;
+    height: 70px;
+    left: 15px;
+    bottom: 10px;
+    transform: scaleX(-1);
+    clip-path: polygon(50% 0%, 0% 100%, 50% 100%);
+    background: linear-gradient(#a885e6 0%, #04448a 50%);
+  }
+}
+
+.lighthouse-group {
+    width: 50%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.land {
+  width: 400px;
+  height: 60px;
+  left: -30px;
+  bottom: 0;
+  background-image: linear-gradient(to bottom, #a7affc 0%, #04448a 20%);
+  transform: skewX(35deg);
+  border-radius: 10px;
+}
+
+.lighthouse-holder {
+  height: 480px;
+  width: 100px;
+  bottom: 80px;
+  left: 180px;
+}
+
+.lighthouse {
+  width: 70%;
+  height: 100%;
+  transform: perspective(530px) rotateX(40deg);
+  background-color: $light;
+  background-image: repeating-linear-gradient(
+    -30deg,
+    transparent,
+    transparent 30px,
+    #7252ab 30px,
+    #7252ab 50px
+  );
+  &:after {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    background-image: linear-gradient(
+      90deg,
+      transparentize($x-light, 0.4) 0%,
+      #3f4475 8%,
+      transparent 70%,
+      transparentize($x-light, 0.6) 100%
+    );
+  }
+}
+
+.shadow {
+  width: 100px;
+  height: 50px;
+  left: -40px;
+  bottom: -70px;
+  background: #04448a;
+  transform: skewX(-45deg);
+}
+
+.windows {
+  height: 100%;
+  width: 100%;
+  .window {
+    background-color: #3f4475;
+    height: 25px;
+    width: 15px;
+    left: 30px;
+    border-bottom: 3px solid rgba($x-light, 0.7);
+    border-radius: 25px 25px 0 0;
+  }
+  $bottom: 60px;
+  @for $i from 1 through (4) {
+    .window:nth-of-type(#{$i}) {
+      bottom: $bottom;
+    }
+    $bottom: $bottom + 90px;
+  }
+}
+
+.door {
+  background-color: #303459;
+  height: 40px;
+  width: 25px;
+  left: 25px;
+  bottom: -2px;
+  border-radius: 2px 2px 0 0;
+  .stairs {
+    width: 27px;
+    height: 28px;
+    background-color: #3f4475;
+    top: 34px;
+    left: -1px;
+    transform: perspective(100px) rotateX(45deg);
+    background-image: repeating-linear-gradient(
+      to bottom,
+      #3f4475,
+      #3f4475 4px,
+      $light 4px,
+      rgba(white, 0.1) 5px
+    );
+  }
+}
+
+.top {
+  width: 57px;
+  height: 60px;
+  left: 7px;
+  top: 40px;
+    .rail {
+      width: 100%;
+      height: 17px;
+      bottom: 1px;
+      border: 3px solid #04448a;
+      border-radius: 1px;
+      transform: perspective(1000px) rotateX(-35deg);
+      background-image: repeating-linear-gradient(
+        90deg,
+        #04448a,
+        #04448a 2px,
+        $grey 2px,
+        $yellow 8px
+      );
+      background-position: -2px 0;
+      box-shadow: 0px 0px 15px 1px white;
+   }
+}
+
+.middle {
+  width: 57px;
+  height: 30px;
+  left: 0px;
+  bottom: 14px;
+  border: 2px solid #04448a;
+  border-radius: 3px;
+  background-image: repeating-linear-gradient(
+    90deg,
+    #04448a,
+    #04448a 4px,
+    $grey 4px,
+    rgba(255, 255, 255, 0) 21px
+  );
+  background-position: -2px 0;
+  &:before {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: $yellow;
+    box-shadow: 0 0 10px $x-light, 0 0 20px $yellow, 0 0 30px $yellow,
+    0 0 40px $yellow, 0 0 70px $yellow;
+  }
+}
+
+.roof {
+  width: 0px;
+  height: 0px;
+  left: -1px;
+  bottom: 43px;
+  border-left: 29px solid rgba(255, 255, 255, 0);
+  border-right: 29px solid rgba(255, 255, 255, 0);
+  border-bottom: 29px solid #482685;
+  &:before {
+    width: 7px;
+    height: 7px;
+    left: -3.5px;
+    bottom: -3px;
+    background-color: #482685;
+    border-radius: 50%;
+  }
+  &:after {
+    width: 4px;
+    height: 14px;
+    left: -2px;
+    bottom: 3px;
+    background-color: #482685;
+    border-radius: 3px;
+  }
+}
+.roof-light {
+  width: 55px;
+  height: 30px;
+  left: -25px;
+  clip-path: polygon(50% 0, 0% 100%, 100% 100%);
+  background-image: linear-gradient(
+    135deg,
+    #482685 40%,
+    rgba($yellow, 0.5) 100%
+  );
+}
+
+.light-container {
+  height: 40px;
+  width: 35vw;
+  bottom: 4px;
+  left: 40px;
+  transform-style: preserve-3d;
+  transform-origin: left bottom;
+  transform: perspective(500px) rotateY(0deg);
+  animation: lightRotate 10s linear infinite;
+  .light {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transform-origin: left center;
+    transform: perspective(500px) rotateY(-35deg);
+    background: linear-gradient(90deg, $yellow 10%, rgba(255, 255, 255, 0) 100%);
+  }
+}
+
+.glow {
+  width: 60px;
+  height: 60px;
+  top: 0;
+  left: 0;
+  background-color: $yellow;
+  opacity: 0;
+  border-radius: 50%;
+  animation: lightGlow 10s linear infinite;
+  box-shadow: 0 0 10px $yellow, 0 0 20px $yellow, 0 0 30px $yellow, 0 0 40px $yellow, 0 0 50px $yellow, 0 0 60px $yellow, 0 0 70px $yellow, 0 0 80px $yellow;
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+@keyframes wave {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-80px);
+  }
+}
+@keyframes boat {
+	0% {
+		transform: translateX(120vw) scale(0.8);
+	}
+	80%,
+	100% {
+		transform: translateX(-10vw) scale(0.8);
+	}
+}
+@keyframes boatShadow {
+	0% {
+		transform: skewX(35deg) translateX(15px);
+	}
+	50%,
+	100% {
+		transform: skewX(-55deg) translateX(-40px);
+	}
+}
+
+@keyframes lightRotate {
+  0%,
+  100% {
+    // initial and final state
+    transform: perspective(500px) rotateY(0deg);
+  }
+  25% {
+    //rotates to the back
+    transform: perspective(500px) rotateY(35deg);
+  }
+  75% {
+    // rotates to the front
+    transform: perspective(500px) rotateY(-35deg);
+  }
+}
+
+@keyframes lightGlow {
+	50% {
+		opacity: 0;
+	}
+	75% {
+		opacity: 0.7;
+	}
+}
