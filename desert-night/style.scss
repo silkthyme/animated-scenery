@@ -1,0 +1,310 @@
+:root {
+    --extra-dark-violet: #030438;
+    --dark-violet: #181948;
+    --violet: #282254;
+    --light-violet: #533b74;
+    --salmon-violet: #9b6a8b;
+    --salmon: #da8c7a;
+    --peach: #fcbdae;
+  }
+  html {
+    box-sizing: border-box;
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+  * {
+    position: absolute;
+  }
+  *:before,
+  *:after {
+    content: "";
+    position: absolute;
+  }
+  
+  html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .container {
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .sky {
+    background: var(--dark-violet);
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+    background-image: linear-gradient(
+      var(--dark-violet) 0%,
+      var(--violet) 15%,
+      var(--light-violet) 35%,
+      var(--salmon-violet) 55%,
+      var(--salmon) 70%
+    )
+  }
+  
+  .dunes {
+    background: var(--dark-violet);
+    width: 100%;
+    height: 31%;
+    bottom: 0;
+    left: 0;
+    z-index: 4;
+  }
+  
+  .dune1 {
+   width: 3000px;
+   height: 490px;
+   bottom: 90px;
+   left: -300px;
+   z-index: 4;
+   background: var(--salmon-violet);
+   background-image: linear-gradient(to top, var(--extra-dark-violet) 0%, var(--violet) 40%, var(--light-violet) 65%, var(--salmon-violet) 75%);
+   -webkit-clip-path: ellipse(43% 20% at 51% 59%);
+   clip-path: ellipse(43% 20% at 51% 59%);
+   transform: skewY(-5deg);
+  }
+  
+  .dune2 {
+    width: 2000px;
+    height: 800px;
+    bottom: -170px;
+    left: -200px;
+    z-index: 5;
+    background: var(--salmon-violet);
+    transform: skewY(10deg);
+    -webkit-clip-path: ellipse(43% 20% at 51% 59%);
+    clip-path: ellipse(43% 20% at 51% 59%);
+    background-image: linear-gradient(to top, var(--dark-violet) 0%, var(--violet) 40%, var(--salmon-violet) 90%);
+  }
+  
+  .dune3 {
+    width: 1000px;
+    height: 800px;
+    bottom: -160px;
+    left: -200px;
+    z-index: 6;
+    background: var(--salmon-violet);
+    transform: skewY(20deg);
+    -webkit-clip-path: ellipse(43% 20% at 51% 59%);
+    clip-path: ellipse(43% 20% at 51% 59%);
+    background-image: linear-gradient(to top, var(--extra-dark-violet) 0%, var(--violet) 50%, var(--salmon-violet) 80%);
+  }
+  
+  .dune4 {
+    width: 2000px;
+    height: 800px;
+    bottom: -150px;
+    left: 400px;
+    z-index: 7;
+    background: var(--salmon-violet);
+    transform: skewY(-10deg);
+    -webkit-clip-path: ellipse(43% 20% at 51% 59%);
+    clip-path: ellipse(43% 20% at 51% 59%);
+    background-image: linear-gradient(350deg, var(--dark-violet) 0%, var(--violet)   55%, var(--light-violet) 60%, var(--salmon-violet) 65%);
+  }
+  
+  .dune5 {
+    width: 2000px;
+    height: 1000px;
+    bottom: -500px;
+    z-index: 8;
+    background: var(--salmon-violet);
+    transform: skewY(15deg);
+    left: -500px;
+    -webkit-clip-path: ellipse(43% 20% at 51% 59%);
+    clip-path: ellipse(43% 20% at 51% 59%);
+    background-image: linear-gradient(to top, var(--dark-violet) 0%, var(--violet)   50%, var(--light-violet) 70%, var(--salmon-violet) 90%);
+  }
+  
+  .dune6 {
+    width: 3000px;
+    height: 1000px;
+    bottom: -480px;
+    z-index: 9;
+    background: var(--salmon-violet);
+    transform: skewY(-2deg);
+    left: 0px;
+    -webkit-clip-path: ellipse(43% 20% at 51% 59%);
+    clip-path: ellipse(43% 20% at 51% 59%);
+     background-image: linear-gradient(to top, var(--extra-dark-violet) 0%, var(--violet) 99%);
+  }
+  
+  .stars {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    .star {
+      background-color: var(--salmon);
+      box-shadow: 0 0 2px 0px white;
+      border-radius: 50%;
+    }
+  }
+  
+  @for $i from 1 through (50) {
+    $size: random(11)+px;
+    .star:nth-of-type(#{$i}) {
+      top: random(100)+vh;
+      left: random(100)+vw;
+      width: $size;
+      height: $size;
+      animation-delay: (random(5)+2)+s;
+      animation: twinkle (random(5)+3)+s ease-in-out infinite alternate;
+    }
+  }
+  
+  .moon {
+    width: 250px;
+    height: 250px;
+    top: 140px;
+    left: 250px;
+    border-radius: 50%;
+    z-index: 2;
+    background-color: var(--salmon);
+    transform: rotate(320deg);
+    background-image: linear-gradient(
+      270deg,
+      var(--violet) 0%,
+      var(--salmon) 99%
+    );
+    &:after {
+      height: 230px;
+      width: 230px;
+      top: 5%;
+      left: 17%;
+      border-radius: 50%;
+      background-color: white;
+      background-image: linear-gradient(
+        40deg,
+        #523b74 0%,
+        #1f1d4d 90%
+      )
+    }
+  }
+  
+  .pyramids {
+    bottom: 100px;
+    left: 200px;
+  }
+  
+  .left-pyramid {
+    width: 450px;
+    bottom: 240px;
+    z-index: 4;
+    height: 200px;
+    background-color: var(--dark-violet);
+    background-image: linear-gradient(to left, var(--extra-dark-violet) 0%, var(--dark-violet) 60%);
+    left: 250px;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    &:before {
+      height: 200px;
+      width: 225px;
+      left: 0px;
+      background-color: var(--light-violet);
+      background-image: linear-gradient(to top, var(--violet) 0%, var(--light-violet) 65%);
+     -webkit-clip-path: polygon(25% 0%, 100% 0%, 41% 100%, 0% 100%);
+     clip-path: polygon(25% 0%, 100% 0%, 41% 100%, 0% 100%);
+    }
+  }
+  
+  .middle-pyramid {
+    width: 530px;
+    height: 250px;
+    z-index: 5;
+    background-color: var(--violet);
+    background-image: linear-gradient(to top, var(--dark-violet) 0%, var(--violet) 30%);
+    left: 450px;
+    bottom: 240px;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    &:before {
+      height: 250px;
+      width: 270px;
+      left: -5px;
+      background-color: var(--light-violet);
+      background-image: linear-gradient(to top, var(--violet) 0%, var(--light-violet) 30%);
+      -webkit-clip-path: polygon(25% 0%, 100% 0%, 59% 100%, 0% 100%);
+      clip-path: polygon(25% 0%, 100% 0%, 59% 100%, 0% 100%);
+      }
+  }
+  
+  .right-pyramid {
+    width: 400px;
+    height: 170px;
+    z-index: 3;
+    left: 750px;
+    bottom: 240px;
+    background-color: var(--dark-violet);
+    background-image: linear-gradient(to left, var(--extra-dark-violet) 0%, var(--dark-violet) 60%);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    &:before {
+      height: 100px;
+      width: 200px;
+      left: 0px;
+      background-color: var(--light-violet);
+      background-image: linear-gradient(to top, var(--violet) 0%, var(--light-violet) 90%);
+      -webkit-clip-path: polygon(25% 0%, 100% 0%, 83% 100%, 0% 100%);
+      clip-path: polygon(25% 0%, 100% 0%, 83% 100%, 0% 100%);
+    }
+  }
+  
+  .small-left-pyramid {
+    width: 170px;
+    height: 80px;
+    z-index: 6;
+    left: 100px;
+    bottom: 240px;
+    background-color: var(--violet);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    &:before {
+      height: 80px;
+      width: 100px;
+      left: -13px;
+      background-color: var(--light-violet);
+      -webkit-clip-path: polygon(25% 0%, 100% 0%, 41% 100%, 0% 100%);
+      clip-path: polygon(25% 0%, 100% 0%, 41% 100%, 0% 100%);
+    }
+  }
+  
+  .small-right-pyramid {
+    width: 150px;
+    height: 70px;
+    z-index: 6;
+    left: 360px;
+    bottom: 240px;
+    background-color: #453269;
+    background-image: linear-gradient(to top, var(--dark-violet) 0%, #453269 50%);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    &:before {
+      height: 70px;
+      width: 80px;
+      left: -5px;
+      background-color: var(--light-violet);
+      background-image: linear-gradient(to top, var(--light-violet) 0%, var(--salmon-violet) 99%);
+      -webkit-clip-path: polygon(25% 0%, 100% 0%, 44% 100%, 0% 100%);
+      clip-path: polygon(25% 0%, 100% 0%, 44% 100%, 0% 100%);
+    }
+  }
+  
+  @keyframes twinkle {
+    50% {
+      width: 3px;
+      height: 3px;
+      opacity: 0.4;
+    }
+  }
